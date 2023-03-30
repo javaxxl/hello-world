@@ -10,7 +10,7 @@ pipeline {
         }
         stage('build docker image') {
             steps {
-                sh '/usr/bin/mvn clean package -DskipTests'
+                sh '/usr/bin/mvn clean package -DskipTests -X'
                 echo 'mvn - SUCCESS'
             }
         }
