@@ -12,6 +12,8 @@ pipeline {
             steps {
                 sh 'mvn -v'
                 sh 'java --version'
+                sh '!#/bin/sh -l'
+                sh 'mvn -v'
                 sh '/usr/bin/mvn clean package -DskipTests -X'
                 echo 'mvn - SUCCESS'
             }
