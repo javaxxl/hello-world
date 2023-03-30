@@ -11,7 +11,7 @@ pipeline {
                 echo 'pull code from github - SUCCESS'
             }
         }
-        stage('build docker image') {
+        stage('maven build') {
             steps {
 
                 sh 'java --version'
@@ -25,8 +25,9 @@ pipeline {
                 echo 'sonarqube scan code - SUCCESS'
             }
         }
-        stage('push code to server ') {
+        stage('run the jar') {
             steps {
+                sh 'java -jar hello-world.jar'
                 echo 'push code to server - SUCCESS'
             }
         }
