@@ -13,7 +13,7 @@ pipeline {
 
                 sh 'java --version'
                 sh '/usr/share/maven/mvn -v'
-                sh '/usr/share/maven clean package -DskipTests -X'
+                sh '/usr/share/maven/mvn clean package -DskipTests -X'
                 echo 'mvn - SUCCESS'
             }
         }
