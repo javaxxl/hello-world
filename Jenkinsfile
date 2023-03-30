@@ -10,8 +10,8 @@ pipeline {
         }
         stage('build docker image') {
             steps {
-                echo 'build docker image - SUCCESS'
-                echo 'build docker image - SUCCESS'
+                sh '/usr/bin/mvn clean package -DskipTests'
+                echo 'mvn - SUCCESS'
             }
         }
         stage('sonarqube scan code') {
