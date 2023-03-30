@@ -12,8 +12,8 @@ pipeline {
             steps {
 
                 sh 'java --version'
-                sh 'mvn -v'
-                sh '/usr/bin/mvn clean package -DskipTests -X'
+                sh '/usr/share/maven/mvn -v'
+                sh '/usr/share/maven clean package -DskipTests -X'
                 echo 'mvn - SUCCESS'
             }
         }
