@@ -27,7 +27,7 @@ pipeline {
         }
         stage('run the jar') {
             steps {
-                sh 'java -jar hello-world.jar'
+                sh 'java -jar /var/jenkins_home/jobs/hello-world/workspace/target/hello-world-0.0.1-SNAPSHOT.jar'
                 echo 'push code to server - SUCCESS'
             }
         }
